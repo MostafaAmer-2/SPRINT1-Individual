@@ -1,0 +1,44 @@
+<div class="row">
+
+      
+      
+      <p> Name <input type="text" id="name1" width=300  class="form-control"> </p> 
+      <p> Price <input type="number" id="price1" width=300 class="form-control"></p>
+     
+      
+      <div>
+          <br><p><button (click) ="add()" class="form-control btn btn-success" width=300>Add an item</button></p>
+      </div>
+
+      
+      </div>
+      <hr>
+      <div class="column">
+        <div class="col-md-12">
+
+            <table class="table">
+                <tr>
+                    
+                    <th>name</th>
+                    <th>price</th> 
+                    <th>createdAt</th>
+                    <th>updatedAt</th>
+                    <th>sellerName</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </tr>
+            <tr *ngFor="let item of items;let i=index" >
+              
+                  
+                    <td> {{item.name}} </td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.createdAt}}</td>
+                    <td>{{item.updatedAt}}</td>
+                    <td>{{item.sellerName}}</td>
+                    <td><button (click)="delete(item)" class="form-control btn btn-success">Delete</button></td>
+                  <td><button (click)="update(item)" class="form-control btn btn-success">Edit</button></td>
+                </tr>
+              </table>
+    
+  </div>
+</div>

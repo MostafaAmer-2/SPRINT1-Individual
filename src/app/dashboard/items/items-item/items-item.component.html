@@ -1,0 +1,15 @@
+<nb-card style="padding:10px">
+  <div>
+
+    <div class="float-left">
+      <h4> {{item.name}}</h4>
+      <p> {{item.id}} </p>
+      <p> {{item.price}} </p>
+      <p> {{item.sellerName}} </p>
+    </div>
+    <div class="float-right"> 
+        <button (click) ="deleteItem(item)">Delete</button>
+      
+    </div>
+  </div>
+</nb-card>
